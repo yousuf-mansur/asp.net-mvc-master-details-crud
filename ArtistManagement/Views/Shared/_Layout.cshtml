@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.7.1.js"></script>
+    @RenderSection("Styles", required: false)
+</head>
+<body class="container-fluid mt-2">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-theater-masks me-2"></i>NameSpace Theatre
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        @Html.ActionLink("Home", "Index", "Home", new { }, new { @class = "nav-link active" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Role", "Index", "Role", new { }, new { @class = "nav-link active" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Artist", "Index", "Artist", new { }, new { @class = "nav-link active" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4 mb-3">
+        @RenderBody()
+    </div>
+    <footer class="container mt-4 bg-body-secondary text-success">
+        <p class="text-center fw-bold">&copy; @DateTime.Now.Year - www.namespacetheatre.com</p>
+    </footer>
+    <script src="~/Scripts/jquery-3.7.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $("#btnPlus").click(function (e) {
+            e.preventDefault();
+            var roleContainer = $("#rolesContainer");
+            $.ajax({
+                url: "/Artist/AddNewRole",
+                type: "GET",
+                success: function (data) {
+                    roleContainer.append(data);
+                }
+            });
+        });
+        $(document).on("click", "#btnDelete", function (e) {
+            e.preventDefault();
+            $(this).parent().parent().remove();
+        })
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

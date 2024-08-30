@@ -1,0 +1,63 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    transition: transform 0.2s; /* Animation */
+}
+
+    .card:hover {
+        transform: translateY(-5px); /* Lift effect on hover */
+    }
+
+.form-group img {
+    margin-top: 10px;
+    max-height: 200px; /* Limit preview image height */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.small-text {
+    font-size: 1rem;
+}
+
+.table-sm {
+    font-size: 1rem;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table th {
+    white-space: nowrap;
+}
+
+.table tbody tr td:first-child img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+

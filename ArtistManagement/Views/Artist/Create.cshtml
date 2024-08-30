@@ -1,0 +1,113 @@
+﻿@model ArtistManagement.Models.ViewModels.ArtistViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+@using (Html.BeginForm("Create", "Artist", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+<div class="card">
+    <h2 class="display-5 text-center">Artist and Role Details</h2>
+
+    <div class="row">
+        <div class="col-6">
+            <h4 class="text-center">Artist</h4>
+            <div class="row mb-2">
+                @Html.LabelFor(x => x.ArtistName, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                <div class="col-9">
+                    @Html.TextBoxFor(x => x.ArtistName, new { @class = "form-control form-control-sm" })
+                </div>
+                <div class="col-12">
+                    @Html.ValidationMessageFor(x => x.ArtistName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                @Html.LabelFor(x => x.DateOfBirth, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                <div class="col-9">
+                    @Html.TextBoxFor(x => x.DateOfBirth, new { @class = "form-control form-control-sm", type = "date" })
+                </div>
+                <div class="col-12">
+                    @Html.ValidationMessageFor(x => x.DateOfBirth, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+           
+
+            <div class="row mb-2">
+                @Html.LabelFor(x => x.Email, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                <div class="col-9">
+                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control form-control-sm", type = "email" })
+                </div>
+                <div class="col-12">
+                    @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                @Html.LabelFor(x => x.MobileNo, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                <div class="col-9">
+                    @Html.TextBoxFor(x => x.MobileNo, new { @class = "form-control form-control-sm", type = "phone" })
+                </div>
+                <div class="col-12">
+                    @Html.ValidationMessageFor(x => x.MobileNo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                @Html.LabelFor(x => x.MaritalStatus, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                <div class="col-9">
+                    @Html.CheckBoxFor(x => x.MaritalStatus)
+                </div>
+                <div class="col-12">
+                    @Html.ValidationMessageFor(x => x.MaritalStatus, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <h4 class="text-center">Roles</h4>
+            <div class="d-flex justify-content-end">
+                <a href="#" id="btnPlus" class="btn btn-primary btn-sm" style="margin-right:2px;">
+                    <i class="fa fa-plus"></i> Add Role
+                </a>
+            </div>
+            <div id="rolesContainer">
+                @Html.Action("AddNewRole", "Artist")
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group text-start mt-4">
+        <h5>
+            <label for="PictureFile" style="cursor: pointer; color: blue; text-decoration: none;">
+                Upload Artist Picture
+            </label>
+        </h5>
+        <input type="file" id="PictureFile" name="PictureFile" class="form-control form-control-sm visually-hidden" />
+        @Html.ValidationMessageFor(x => x.PictureFile, "", new { @class = "text-danger" })
+        <img id="previewImage" src="/Images/noimage.jpg" alt="Image Preview" class="rounded" style="margin-top: 10px;" />
+    </div>
+
+
+    <div class="d-flex justify-content-center mt-4">
+        <input type="submit" value="Save Data" class="btn btn-success" />
+    </div>
+</div>
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#PictureFile").change(function (event) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $("#previewImage").attr("src", e.target.result);
+                };
+                reader.readAsDataURL(event.target.files[0]);
+            });
+        });
+    </script>
+}

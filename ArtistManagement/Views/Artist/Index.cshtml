@@ -1,0 +1,82 @@
+﻿
+@model PagedList.IPagedList<ArtistManagement.Models.Artist>
+@using PagedList.Mvc
+
+
+
+
+@{
+    ViewBag.Title = "Artist List";
+}
+
+<div class="row">
+    <div class="col">
+        <h2 class="display-4 text-center">Artist List</h2>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+                @using (Html.BeginForm("Index", "Artist", FormMethod.Get))
+                {
+                    <div class="input-group input-group-sm">
+                        @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Search by name" })
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary btn-sm m-2">Search</button>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div>
+                <a href="@Url.Action("Create", "Artist")" class="btn btn-primary btn-sm"><i class="fa fa-plus-circle"></i> Add New Artist</a>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped table-sm table-hover">
+            <thead>
+                <tr>
+                    <th>Picture</th>
+                    <th>@Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })</th>
+                    <th>Birth Date</th>
+                    <th>Age</th>
+                    <th>Mobile No</th>
+                    <th>Email</th>
+                    <th>Marital Status</th>
+                    <th>Role Title</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var artist in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="@artist.Picture" alt="Artist Picture" class="rounded-circle" />
+                        </td>
+                        <td>@artist.ArtistName</td>
+                        <td>@artist.DateOfBirth.ToShortDateString()</td>
+                        <td>@artist.Age</td>
+                        <td>@artist.MobileNo</td>
+                        <td>@artist.Email</td>
+                        <td>@(artist.MaritalStatus ? "Married" : "Single")</td>
+                        <td>@string.Join(", ", artist.RoleEntries.Select(r => r.Role.RoleTitle))</td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Artist", new { id = artist.ArtistId })" class="btn btn-success btn-sm">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
+                            <a href="@Url.Action("Delete", "Artist", new { id = artist.ArtistId })" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="small-text">
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+</div>
+
+
+
+

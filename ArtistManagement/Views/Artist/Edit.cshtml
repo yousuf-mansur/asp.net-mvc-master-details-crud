@@ -1,0 +1,136 @@
+﻿@model ArtistManagement.Models.ViewModels.ArtistViewModel
+@{
+    ViewBag.Title = "Edit";
+}
+
+@using (Html.BeginForm("Edit", "Artist", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-6">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="display-5">Artist</h2>
+                    @Html.HiddenFor(x => x.ArtistID) @Html.HiddenFor(x => x.Picture)
+
+                    <!-- Artist Name -->
+                    <div class="row mb-2">
+                        @Html.LabelFor(x => x.ArtistName, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                        <div class="col-7">
+                            @Html.TextBoxFor(x => x.ArtistName, new { @class = "form-control form-control-sm" })
+                        </div>
+                        <div class="col-2">
+                            @Html.ValidationMessageFor(x => x.ArtistName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="row mb-2">
+                        @Html.LabelFor(x => x.DateOfBirth, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                        <div class="col-7">
+                            @Html.EditorFor(x => x.DateOfBirth, "{0:yyyy-MM-dd}", new { htmlAttributes = new { @class = "form-control form-control-sm", type = "date" } })
+                        </div>
+                        <div class="col-2">
+                            @Html.ValidationMessageFor(x => x.DateOfBirth, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+
+                    <!-- Email -->
+                    <div class="row mb-2">
+                        @Html.LabelFor(x => x.Email, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                        <div class="col-7">
+                            @Html.TextBoxFor(x => x.Email, new { @class = "form-control form-control-sm", type = "email" })
+                        </div>
+                        <div class="col-2">
+                            @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Mobile No -->
+                    <div class="row mb-2">
+                        @Html.LabelFor(x => x.MobileNo, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                        <div class="col-7">
+                            @Html.TextBoxFor(x => x.MobileNo, new { @class = "form-control form-control-sm", type = "phone" })
+                        </div>
+                        <div class="col-2">
+                            @Html.ValidationMessageFor(x => x.MobileNo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <!-- Picture Upload -->
+                    
+                    <div class="row mb-2">
+            @Html.LabelFor(x => x.PictureFile, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+            <div class="col-7">
+                @Html.TextBoxFor(x => x.PictureFile, new { @class = "form-control form-control-sm mb-1 ", type = "file", id = "pictureFile" })
+                @{
+                    string imageUrl = string.IsNullOrEmpty(Model.Picture) ? Url.Content("~/Images/noimage.jpg") : Url.Content(Model.Picture);
+                }
+                <img id="picturePreview" src="@imageUrl" width="100" class="rounded" />
+            </div>
+            <div class="col-2">
+                @Html.ValidationMessageFor(x => x.PictureFile, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+                    <!-- Marital Status -->
+                    <div class="row mb-2">
+                        @Html.LabelFor(x => x.MaritalStatus, htmlAttributes: new { @class = "col-form-label col-form-label-sm col-3" })
+                        <div class="col-7">
+                            @Html.CheckBoxFor(x => x.MaritalStatus)
+                        </div>
+                        <div class="col-2">
+                            @Html.ValidationMessageFor(x => x.MaritalStatus, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h2 class="display-5">Role</h2>
+                    <div class="d-flex justify-content-end">
+                        <a href="#" id="btnPlus" class="btn btn-success btn-sm" style="margin-right:2px;"><i class="fa fa-plus"></i>Add Details</a>
+                    </div>
+                    <div id="rolesContainer">
+                        @foreach (var item in Model.RoleList)
+                        {
+                            @Html.Action("AddNewRole", "Artist", new { id = item })
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-end">
+        <input type="submit" value="Update Data" class="btn btn-primary btn-sm" />
+    </div>
+}
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#pictureFile").change(function (event) {
+                var input = event.target;
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#picturePreview").attr("src", e.target.result);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            });
+        });
+    </script>
+}
+
+
+
+
+
+
+
