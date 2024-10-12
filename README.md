@@ -1,4 +1,4 @@
-# Master-Details CRUD Application
+# Asp.Net MVC Master-Details CRUD Application
 
 This project is a Master-Details CRUD (Create, Read, Update, Delete) application built with ASP.NET MVC, Entity Framework 6.4.4, and jQuery Ajax. It demonstrates how to perform CRUD operations in a master-details relationship using modern web technologies.
 
