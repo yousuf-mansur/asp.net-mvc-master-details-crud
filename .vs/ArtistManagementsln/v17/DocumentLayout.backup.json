@@ -3,15 +3,11 @@
   "WorkspaceRootPath": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\artistmanagement\\models\\viewmodels\\artistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|solutionrelative:artistmanagement\\models\\viewmodels\\artistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|d:\\isdb-bisew\\gitproject\\artistmanagementsln\\artistmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\artistmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|solutionrelative:artistmanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\artistmanagement\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|d:\\isdb-bisew\\gitproject\\artistmanagementsln\\artistmanagement\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|solutionrelative:artistmanagement\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -29,6 +25,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\artistmanagement\\views\\artist\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|solutionrelative:artistmanagement\\views\\artist\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\artistmanagement\\models\\viewmodels\\artistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|solutionrelative:artistmanagement\\models\\viewmodels\\artistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95898F00-17BB-4EA5-8C38-6CDA06FF4B5A}|ArtistManagement\\ArtistManagement.csproj|D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\artistmanagement\\views\\role\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -77,12 +77,45 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Web.config",
+              "RelativeDocumentMoniker": "ArtistManagement\\Web.config",
+              "ToolTip": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Web.config",
+              "RelativeToolTip": "ArtistManagement\\Web.config",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAADQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-08-30T05:36:24.493Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "ArtistManagement\\Models\\Role.cs",
+              "ToolTip": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Models\\Role.cs",
+              "RelativeToolTip": "ArtistManagement\\Models\\Role.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T07:01:57.633Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ArtistController.cs",
+              "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Controllers\\ArtistController.cs",
+              "RelativeDocumentMoniker": "ArtistManagement\\Controllers\\ArtistController.cs",
+              "ToolTip": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Controllers\\ArtistController.cs",
+              "RelativeToolTip": "ArtistManagement\\Controllers\\ArtistController.cs",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAAALwAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-26T06:56:48.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Views\\Artist\\Create.cshtml",
               "RelativeDocumentMoniker": "ArtistManagement\\Views\\Artist\\Create.cshtml",
@@ -102,11 +135,12 @@
               "RelativeToolTip": "ArtistManagement\\Views\\Artist\\Index.cshtml",
               "ViewState": "AQIAABIAAAAAAAAAAIB5wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T20:16:29.593Z"
+              "WhenOpened": "2024-08-26T20:16:29.593Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Views\\Artist\\Edit.cshtml",
               "RelativeDocumentMoniker": "ArtistManagement\\Views\\Artist\\Edit.cshtml",
@@ -118,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "ArtistManagement\\Views\\Home\\Index.cshtml",
@@ -126,70 +160,33 @@
               "RelativeToolTip": "ArtistManagement\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-26T07:01:14.47Z"
+              "WhenOpened": "2024-08-26T07:01:14.47Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ArtistManagement\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "ArtistManagement\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAAsAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-26T06:59:46.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "ArtistViewModel.cs",
               "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Models\\ViewModels\\ArtistViewModel.cs",
               "RelativeDocumentMoniker": "ArtistManagement\\Models\\ViewModels\\ArtistViewModel.cs",
               "ToolTip": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Models\\ViewModels\\ArtistViewModel.cs",
               "RelativeToolTip": "ArtistManagement\\Models\\ViewModels\\ArtistViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAACbAAAAAAAAAA==",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABgAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T07:07:23.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArtistController.cs",
-              "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Controllers\\ArtistController.cs",
-              "RelativeDocumentMoniker": "ArtistManagement\\Controllers\\ArtistController.cs",
-              "ToolTip": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Controllers\\ArtistController.cs",
-              "RelativeToolTip": "ArtistManagement\\Controllers\\ArtistController.cs",
-              "ViewState": "AQIAAK0AAAAAAAAAAAAAALwAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T06:56:48.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Role.cs",
-              "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "ArtistManagement\\Models\\Role.cs",
-              "ToolTip": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Models\\Role.cs",
-              "RelativeToolTip": "ArtistManagement\\Models\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T07:01:57.633Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Web.config",
-              "RelativeDocumentMoniker": "ArtistManagement\\Web.config",
-              "ToolTip": "D:\\IsDB-BISEW\\GitProject\\ArtistManagementsln\\ArtistManagement\\Web.config",
-              "RelativeToolTip": "ArtistManagement\\Web.config",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAADQAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-08-30T05:36:24.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T07:07:23.087Z"
             },
             {
               "$type": "Document",
